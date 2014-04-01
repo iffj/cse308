@@ -60,6 +60,7 @@ public class DatabaseManager implements Serializable{
 	}
 	public User getUserByUsername(String username)
 	{
+		System.out.println("test db method");
 		EntityManager em = EMF.get().createEntityManager();
 		return (User)em.createNamedQuery("User.findByUsername").setParameter("username", username).getSingleResult();
 	}
@@ -67,37 +68,4 @@ public class DatabaseManager implements Serializable{
 }
 
 
-//package com.csinteract;
-//
-//import java.io.Serializable;
-//
-//import javax.annotation.PostConstruct;
-//import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.SessionScoped;
-//import javax.persistence.EntityManager;
-//import javax.persistence.EntityTransaction;
-//
-//import entities.User;
-//
-//
-//@ManagedBean
-//@SessionScoped
-//public class DatabaseManager implements Serializable{
-//
-//	/**
-//	 * 
-//	 */
-//	private static final long serialVersionUID = 1L;
-//	private EntityManager em;
-//	private EntityTransaction et;
-//	
-//	
-//	
-//	
-//	public DatabaseManager()
-//	{
-//		
-//	}
-//	
 
-//}

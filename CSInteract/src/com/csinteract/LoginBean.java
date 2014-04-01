@@ -42,7 +42,7 @@ public class LoginBean implements Serializable {
 			return null;
 		}
 		
-		return "profile.xhtml";
+		return "profile.jsf";
 	}
 
 	public boolean authenticate()
@@ -53,7 +53,7 @@ public class LoginBean implements Serializable {
 			
 		try
         {
-			u = dbm.getUserByID(1);
+			u = dbm.getUserByUsername(username);
             if (!BCrypt.checkpw(password, u.getPassword()))
             {
                 
