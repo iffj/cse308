@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSInteract</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/template.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div id="headerBG">
+
+
+            <div id="header">
+
+
+                <span id="logo">
+                    <a href="index.html"><img src="img/logosmall2.png" alt="logo"/></a>
+                </span>
+                <div >
+                    <span class="navlinkSpan">
+                        <a class="navLink" href="index.html">Home</a>
+                    </span> <em class="vertiicalLine">|</em>
+                    <span class="navlinkSpan">
+                        <a class="navLink" href="lessons.html">Lessons</a>
+                    </span> <em class="vertiicalLine">|</em>
+                    <span class="navlinkSpan">
+                        <a class="navLink" href="forum.html">Forum</a>
+                    </span>
+                </div>
+                <div id="searchDiv">
+                    <input  type="text" placeholder="Search..." id="searchBar" />
+                    <input style="position: relative; right: 6px; top:10px; border-right: 1px solid black; border-top: 1px solid black; border-bottom: 1px solid black;"  type="image" src="img/searchico.png" alt="search icon"/>
+                </div>
+
+
+                <table id="headerUserTable">
+                    <tr>
+                        <td>
+                            <ul> 
+                                
+                                <li class="nav">Logged in as  
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    apstonybrook <span class="caret"></span>
+                                </a> 
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="setting.html">Settings</a></li>
+                                    <li><a href="admin.html">Admin</a></li>
+                                    <li><a href="loggedOutTemplate.html">Log out</a></li>
+                                </ul>
+                                </li>
+                            </ul>
+                            </td>
+                            <td>
+                               
+                                </td>      
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <h2 style="color: rgb(80,80,80)">apstonybrook</h2>
+            
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Completed</th>
+                        <th>date viewed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Core Java</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" 
+                                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                60%
+                                </div>
+                        </td>
+                        <td>8 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td>Data Structures</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" 
+                                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                20%
+                                </div>
+                        </td>
+                        <td>Mar 13, 2014</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="left">
+
+            </div>
+            <div id="middle">
+
+               
+            </div>
+            <div id="right">
+
+            </div>
+        </div>
+        <div id="footerBG">
+            <div id="footer">
+                &copy CSInteract<br />
+                <a href="#">Home</a> |
+                <a href="#">Lessons</a> |
+                <a href="#">Forum</a> |
+                <a href="#">Help</a>
+            </div>
+        </div>
+
+
+    </body>
+</html>
