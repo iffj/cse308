@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="#{userBean.getTemplate()}"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+                >
+                
+                <ui:define name="headElements">
+                
+
+                </ui:define>
+       <ui:define name="content">
+        <div class="jumbotron">
+            <h2 style="color: rgb(80,80,80)">Discussions</h2>
+            <div>
+                <ul class="nav nav-tabs navbar-right">
+                    <li class="active"><a href="#">Hot</a></li>
+                    <li ><a href="#">Mostly viewed</a></li>
+                    <li><a href="#">Date</a></li>
+                </ul>
+            </div>
+            <br /><br /><br />
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Views</th>
+                            <th>Likes</th>
+                            <th>Reply</th>
+                            <th>Talk</th>
+                            <th>Posted Date</th>
+                            <th>User</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>402</td>
+                            <td>40</td>
+                            <td>1</td>
+                            <td class="talkCol"><a href="talk.jsf">Quick Sort?</a></td>
+                            <td>21hr ago</td>
+                            <td>apstonybrook</td>
+                        </tr>
+                        <tr>
+                            <td>203</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td class="talkCol"><a href="#">What is the order of complexity of Merge sort?</a></td>
+                            <td>1hr ago</td>
+                            <td>Jay</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>25</td>
+                            <td>0</td> 
+                            <td class="talkCol"><a href="#">Implementing linked list</a></td>
+                            <td>5m ago</td>
+                            <td>Laser Lemon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a class="btn btn-default btn-lg" href="createTalk.jsf" role="button">Create Talk</a>
+            <div>
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+       </ui:define>
+       </ui:composition>

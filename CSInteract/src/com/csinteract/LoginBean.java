@@ -41,7 +41,7 @@ public class LoginBean implements Serializable {
 		{
 			return null;
 		}
-		
+		ub.setLoggedIn(true);
 		return "profile.jsf";
 	}
 

@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
 
@@ -26,11 +27,21 @@ public class UserBean implements Serializable{
 	@PostConstruct
 	public void init()
 	{
-		email="testing this postConstruct";
+		isLoggedIn = false;
 	}
 	private int userId;
 	private String email = "drgdrgdrg";
 	private String name;
+	private boolean isLoggedIn;
+	
+	
+	public String logout() {
+        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        return "/index.jsf?faces-redirect=true";
+    }
+	
+	
+	
 	
 	
 	public String getEmail()
@@ -60,4 +71,26 @@ public class UserBean implements Serializable{
 	{
 		return null;
 	}
+
+	public boolean isLoggedIn() {
+		return isLoggedIn;
+	}
+
+	public void setLoggedIn(boolean isLoggedIn) {
+		this.isLoggedIn = isLoggedIn;
+	}
+	public String getTemplate()
+	{
+		if(isLoggedIn)
+		{
+			return "loggedInTemplate.xhtml";
+		}
+		else
+		{
+			return "loggedOutTemplate.xhtml";
+					
+		}
+	}
+	
+	
 }

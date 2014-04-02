@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="#{userBean.getTemplate()}"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+                >
+                
+                <ui:define name="headElements">
+                
+
+                </ui:define>
+       <ui:define name="content">
+        <div class="jumbotron">
+
+            <a href="lessons.html"><em>Lessons</em></a> > <em>Core Java</em> > <em>Objects and Classes</em> > <em>Create Lesson</em>
+            <h1 style="color: rgb(80,80,80)">Create Lesson</h1>
+            <table>
+                <tr>
+                    <td>
+                        Lesson Name: 
+                    </td>
+                    <td style="margin-left: 25px;">
+                        <input placeholder="Objects and Classes" style="width: 500px;;" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Description: 
+                    </td>
+                    <td style=" margin-left: 25px;">
+                        <textarea style="height: 100px; width: 500px;;">Enter a brief description of what the lesson will cover</textarea>
+                        <br/>
+                        <em style="color: gray; font-size: 12;">500 character limit</em>
+                    </td>
+                </tr>
+            </table>
+
+            <div style="margin-top: 50px; margin-bottom: 50px;" id="lessonBody">
+                <form method="post">
+                    <textArea id="textEditor"></textArea>
+                </form>
+            </div>
+            <div style="color: rgb(80,80,80);" id="quiz">
+                <h3 >Quiz</h3>
+                <ol >
+                    <li style="margin-bottom: 25px;">
+                        Question: &nbsp;&nbsp; <input style="width: 540px;" type="text" /> <br />
+                        <ul >
+                            <li>
+                                Choice 1: &nbsp;&nbsp; <input style="width: 500px;" type="text" />
+                            </li>
+                            <li>
+                                Choice 2: &nbsp;&nbsp; <input style="width: 500px;" type="text" />
+                            </li>
+                            <li>
+                                <a href="#" style="color: black;">Add choice</a>
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <li style="margin-bottom: 25px;">
+                        Question: &nbsp;&nbsp; <input style="width: 540px;" type="text" /> <br />
+                        <ul >
+                            <li>
+                                Choice 1: &nbsp;&nbsp; <input style="width: 500px;" type="text" />
+                            </li>
+                            <li>
+                                Choice 2: &nbsp;&nbsp; <input style="width: 500px;" type="text" />
+                            </li>
+                            <li>
+                                <a href="#" style="color: black;">Add choice</a>
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <li style="margin-bottom: 25px;">
+                        Question: &nbsp;&nbsp; <input style="width: 540px;" type="text" /> <br />
+                        <ul >
+                            <li>
+                                Choice 1: &nbsp;&nbsp; <input style="width: 500px;" type="text" />
+                            </li>
+                            <li>
+                                Choice 2: &nbsp;&nbsp; <input style="width: 500px;" type="text" />
+                            </li>
+                            <li>
+                                <a href="#" style="color: black;">Add choice</a>
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <a href="#" style="color: black;">Add question</a>
+                   
+                        
+                    
+                    
+                </ol>
+            </div>
+            <h3 style="color: rgb(80,80,80);">Preview</h3>
+            <div style="border: 1px solid black; width: 1150px; height: 400px; margin-left: 25px; margin-right: 25px; margin-top: 50px; margin-bottom: 50px;" id="preview">
+                
+            </div>
+            <button id="submitButton"><a style="font-size: 16px; text-decoration: none; color: black;" href="lessons.jsf">Cancel</a></button>
+            <button id="submitButton"><a style="font-size: 16px; text-decoration: none; color: black;" href="lessons.jsf">Submit</a></button>
+
+
+
+        </div>
+      </ui:define>
+      </ui:composition>

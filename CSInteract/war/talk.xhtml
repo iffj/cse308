@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="#{userBean.getTemplate()}"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+                >
+                
+                <ui:define name="headElements">
+                
+
+                </ui:define>
+<ui:define name="content">
+        <div class="jumbotron">
+            <h2 style="color: rgb(80,80,80)">Quick Sort?</h2>
+            
+            <em style="font-size: 15px; color: gray;">apstonybrook -- 21 hours ago</em>
+                <br />
+            <p>I am trying to write a quick sort for Strings. I wrote the code and it works when I run the program. I am able to successfully sort the array. When applying quick sort, you separate the array from 0 - (x - 1) and (x + 1) - y, where x is the pivot position and y is the end of the array. I want to be able to choose my own pivot in my main method rather than continually using the last entry of the array as a pivot. 
+
+                Problem is, I can't think of a way to apply this. I have tried editing the call to quick sort to be quicksort(blah, 0, pivot_position) and edit my quicksort method to quicksort(list, q + 1, list.length - 1). It runs, but it's not sorted. Can I receive any help in figuring this out? Thank you.
+            </p>
+
+            <h2 style="color: rgb(80,80,80)">Discussions</h2>
+            <div class="post">
+                If I were you, I will select a random element and swap it with the last element and apply this algorithm. You already know how to sort using the last element.<br />
+                <em style="font-size: 15px; color: gray;">Phillip Fry -- 10 hours ago</em>
+                <br />
+                <em style="text-decoration: underline;  font-size: 13px; color: rgb(0,162,232);;">Like</em>
+                <br />
+                <div style="margin-left: 40px;" class="comment">
+                    You suck <em style="margin-left: 25px; color:lime">+4</em><br />
+                    <em style="font-size: 15px; color: gray;">Zoidberg -- 8 hours ago</em><br />
+                    <em style="text-decoration: underline;  font-size: 13px; color: rgb(0,162,232);;">Unlike</em>
+                </div>
+                <em style="text-decoration: underline; font-size: 13px; color: rgb(0,162,232);">Reply</em>
+            </div>
+        </div>
+    </ui:define>
+    </ui:composition>

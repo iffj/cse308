@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="#{userBean.getTemplate()}"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+                >
+                
+                <ui:define name="headElements">
+                
+
+                </ui:define>
+       <ui:define name="content">
+        <div class="jumbotron">
+            <h2 style="color: rgb(80,80,80)">Admin Panel</h2>
+
+             <div style="margin-bottom: 35px; padding-bottom: 40px; border-bottom: 1px solid rgb(80,80,80);">
+                <h4 style="color: rgb(80,80,80)">Recently flagged lessons</h4>
+                <table>
+                    <tr>
+                        <th style="width: 300px;">
+                            Lesson
+                        </th>
+                        <th style="width: 150px;">
+                            Topic
+                        </th>
+                        <th style="width: 150px;">
+                            Subtopic
+                        </th>
+                        <th style="width: 100px;">
+                            #Flags
+                        </th>
+                        <th style="width: 300px;">
+                            Action
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="lesson.html">Objects and Classes</a>
+                        </td>
+                        <td>
+                            Core Java
+                        </td>
+                        <td>
+                            Objects and Classes
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                            <button>Ignore</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+             <div style="margin-bottom: 35px; padding-bottom: 40px; border-bottom: 1px solid rgb(80,80,80);">
+                <h4 style="color: rgb(80,80,80)">Search Users</h4>
+
+                <h5 style="color: rgb(80,80,80)">Criteria</h5>
+                <table>
+                    <tr>
+                        <td>
+                            Username
+                        </td>
+                        <td>
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            # lessons created between
+                        </td>
+                        <td>
+                            <input type="text" /> and <input type="text" /> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            # posts between
+                        </td>
+                        <td>
+                            <input type="text" /> and <input type="text" /> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            # comments between
+                        </td>
+                        <td>
+                            <input type="text" /> and <input type="text" /> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Completion % between
+                        </td>
+                        <td>
+                            <input type="text" /> and <input type="text" /> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IP
+                        </td>
+                        <td>
+                            <input type="text" />
+                        </td>
+                    </tr>
+                </table>
+                <button>Search</button> <button>Clear Fields</button> <button>Save Criteria</button>
+                <table style="margin-top: 25px;">
+                    <tr>
+                        <th style="width: 100px;">
+                            Username
+                        </th>
+                        <th style="width: 200px;">
+                            Email
+                        </th>
+                        <th style="width: 100px;">
+                            Name
+                        </th>
+                        <th style="width: 100px;">
+                            # Lessons
+                        </th>
+                        <th style="width: 100px;">
+                            # Posts
+                        </th>
+                        <th style="width: 100px;">
+                            # Comments
+                        </th>
+                        <th style="width: 100px;">
+                            Completion %
+                        </th>
+                        <th style="width: 150px;">
+                            IP
+                        </th>
+                        <th >
+                            Action
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            apstonybrook
+                        </td>
+                        <td>
+                            apstonybrook@gmail.com
+                        </td>
+                        <td>
+                            Anas Patel
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            7%
+                        </td>
+                        <td>
+                            <span title="173.2.50.17&#013;127.0.0.1">173.2.50.17 (2)</span>
+                        </td>
+                        <td>
+                            <button>Edit User</button> <button>Email User</button> <button>Ban User</button> 
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div style="margin-bottom: 35px; padding-bottom: 40px; border-bottom: 1px solid rgb(80,80,80);">
+                <h4 style="color: rgb(80,80,80)">Search Lessons</h4>
+                <select>
+                    <option>By Lesson Name</option>
+                    <option>By Username</option>
+                    <option>By Email</option>
+                    <option>By IP</option>
+                </select>
+                <input type="text" /> <br /><br />
+                #Flags between <input type="text" />  and <input type="text" /> <br /><br />
+                <table>
+                    <tr>
+                        <th style="width: 300px;">
+                            Lesson
+                        </th>
+                        <th style="width: 150px;">
+                            Topic
+                        </th>
+                        <th style="width: 150px;">
+                            Subtopic
+                        </th>
+                        <th style="width: 100px;">
+                            #Flags
+                        </th>
+                        <th style="width: 300px;">
+                            Action
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="lesson.jsf">Objects and Classes</a>
+                        </td>
+                        <td>
+                            Core Java
+                        </td>
+                        <td>
+                            Objects and Classes
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+             <div style="margin-bottom: 35px; padding-bottom: 40px; border-bottom: 1px solid rgb(80,80,80);">
+                <h4 style="color: rgb(80,80,80)">Ban list</h4>
+                <table>
+                    <tr>
+                        <th style="width: 100px;">
+                            Username
+                        </th>
+                        <th style="width: 150px;">
+                            Email
+                        </th>
+                        <th style="width: 100px;">
+                            IP
+                        </th>
+                        <th style="width: 100px;">
+                            Admin
+                        </th>
+                        <th style="width: 250px;">
+                            Reason
+                        </th>
+                        <th style="width: 100px;">
+                            Ban Type
+                        </th>
+                        <th style="width: 100px;">
+                            Date
+                        </th>
+                        <th style="width: 150px;">
+                            Action
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            FrostedFlakes
+                        </td>
+                        <td>
+                            frostedflakes@aol.com
+                        </td>
+                        <td>
+                            192.168.1.1
+                        </td>
+                        <td>
+                            apstonybrook
+                        </td>
+                        <td>
+                            I just felt like it. 
+                        </td>
+                        <td>
+                            IP
+                        </td>
+                        <td>
+                            3/12/2014
+                        </td>
+                        <td>
+                            <button>Unban</button> <button>Email</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            FruityPebbles
+                        </td>
+                        <td>
+                            fruitypebbles@aol.com
+                        </td>
+                        <td>
+                            192.168.1.4
+                        </td>
+                        <td>
+                            apstonybrook
+                        </td>
+                        <td>
+                            Cuz I can.
+                        </td>
+                        <td>
+                            Account
+                        </td>
+                        <td>
+                            3/12/2014
+                        </td>
+                        <td>
+                            <button>Unban</button> <button>Email</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+             <div style="margin-bottom: 35px; padding-bottom: 40px; border-bottom: 1px solid rgb(80,80,80);">
+                <h4 style="color: rgb(80,80,80)">Mailing List</h4>
+                <table>
+                    <tr>
+                        <th style="width: 100px;">
+                            Name
+                        </th>
+                         <th style="width: 100px;">
+                            # users
+                        </th>
+                        <th style="width: 250px;">
+                            Subject
+                        </th>
+                         <th style="width: 250px;">
+                            Content
+                        </th>
+                         <th style="width: 100px;">
+                            Admin
+                        </th>
+                         <th style="width: 250px;">
+                            Action
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            All Users
+                        </td>
+                        <td>
+                            786264289
+                        </td>
+                        <td>
+                            CSInteract Update
+                        </td>
+                        <td>
+                            Hello, welcome to CSInteract! Check out these new lessons!    
+                        </td>
+                        <td>
+                            CSInteract
+                        </td>
+                        <td>
+                            <button>Edit Content</button> <button>Remove</button> <button>Send</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            my custom list
+                        </td>
+                        <td>
+                            1634
+                        </td>
+                        <td>
+                            <input type="text" placeholder="CSInteract"/>
+                        </td>
+                        <td>
+                            <textarea style="width: 95%;">Please check out the newly added lessons on Game Programming...</textarea> 
+                        </td>
+                        <td>
+                            apstonybrook  
+                        </td>
+                        <td>
+                            <button>Save</button>
+                            <button>Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            
+
+        </div>
+  </ui:define>
+  </ui:composition>

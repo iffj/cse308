@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="#{userBean.getTemplate()}"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+                >
+                
+                <ui:define name="headElements">
+                
+
+                </ui:define>
+<ui:define name="content">
+        <div class="jumbotron">
+            <h2 style="color: rgb(80,80,80)">apstonybrook</h2>
+
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputEmail3" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPasswordConfirm3" class="col-sm-2 control-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPasswordConfirm3" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+       </ui:define>
+       </ui:composition>

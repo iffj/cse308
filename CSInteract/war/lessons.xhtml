@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="#{userBean.getTemplate()}"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+                >
+                
+                <ui:define name="headElements">
+                <style>
+            .createLessonButton
+            {
+                margin-top: 35px;
+                width: 105px;
+       
+                margin-bottom: 30px;
+                background-color: rgb(0,162,232);
+                border: 1px solid black;
+                border-radius: 2px;
+                margin-left: 50px;
+              
+            }
+        </style>
+
+                </ui:define>
+<ui:define name="content">
+        <div class="jumbotron">
+
+            <h1 style="color: rgb(80,80,80)">Lessons</h1>
+
+
+            <ul style="list-style: none;">
+                <li>
+                    <em class="plusMinus">-</em> Core Java
+                    <ul style="padding-left: 75px; list-style: none;">
+                        <li>
+                            <em class="plusMinus">+</em> 1. Introduction
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 2. The Java Programming Environment
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 3. Fundamental Programming Structures in Java
+                        </li>
+                        <li>
+                            <em class="plusMinus">-</em> 4. Objects and Classes
+                            <br />
+                            <p style="margin-left: 50px; margin-top: 5px;">
+
+
+                                With the knowledge you now have of the basics of the Java programming language, 
+                                you can learn to write your own classes. In this lesson, you will find information 
+                                about defining your own classes, including declaring member variables, methods, and 
+                                constructors. You will learn to use your classes to create objects, and how to use 
+                                the objects you create.
+
+                            </p>
+                            <ul style="padding-left: 75px; list-style: none;">
+                                <li style="margin-bottom: 25px;">
+                                    <a href="lesson.jsf">Objects and Classes</a><em style="margin-left: 25px; color: gray">....by <b>CSInteract</b></em>
+                                    <div>
+                                        <div style="display: inline-block; width: 90px; height: 10px; background-color: lime;"></div>
+                                        <div style=" position: relative; right: 5px; display: inline-block; width: 10px; height: 10px; background-color: red;"></div>
+
+                                    </div>
+                                    90% positive <em style="color: gray; font-size: 12px;">(212 votes)</em>
+                                    <br />
+
+                                    <em style="margin-left: 25px; color: gray">Let us now look deep into what are objects. 
+                                        If we consider the real-world we can find many objects around us, 
+                                        Cars, Dogs, Humans, etc. All these objects have a state and behavior...</em>
+                                </li>
+                                <li>
+                                    <a href="#">Defining, constructing, and using your own objects </a><em style="margin-left: 25px; color: gray">....by <b>Homer Simpson</b></em>
+                                    <div>
+                                        <div style="display: inline-block; width: 20px; height: 10px; background-color: lime;"></div>
+                                        <div style=" position: relative; right: 5px; display: inline-block; width: 80px; height: 10px; background-color: red;"></div>
+                                    </div>
+                                    20% positive <em style="color: gray; font-size: 12px;">(26 votes)</em>
+                                    <br />
+
+                                    <em style="margin-left: 25px; color: gray">No description...</em>
+                                </li>
+                            </ul>
+                            <div class="createLessonButton">
+                                <a style="text-decoration: none; color: black;" href="createLesson.jsf">Create Lesson</a>
+                                </div>
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 5. Inheritance
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 6. Interfaces and Inner Classes
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 7. Graphics Programming
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 8. Event Handling
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 9. User Interface Components with Swing
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 10. Deploying Applications and Applets
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 11. Exceptions, Logging, Assertions, and Debugging
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 12. Generic Programming
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 13. Collections
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 14. Multi-threading
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <em class="plusMinus">-</em> Data Structures
+                    <ul style="padding-left: 75px; list-style: none;">
+                        <li>
+                            <em class="plusMinus">+</em> 1. Introduction
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 2. Object Oriented Design
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 3. Arrays, Linked List, and Recursion
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 4. Stacks and Queues
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 5. Lists and Iterators
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 6. Trees
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 7. Priority Queues
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 8. Maps and Dictionaries
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 9. Maps and Dictionaries
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 10. Search Trees
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 11. Sorting, Sets, and Selection
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 12. Text Processing
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 13. Graphs
+                        </li>
+                        <li>
+                            <em class="plusMinus">+</em> 14. Memory
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+        </ui:define>
+        </ui:composition>
