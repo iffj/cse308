@@ -58,6 +58,26 @@ public class UserBean implements Serializable{
 	public void setLoggedIn(boolean isLoggedIn) {
 		this.isLoggedIn = isLoggedIn;
 	}
+	
+	
+	//if error occurs, replace the code with the below.
+	public String getTemplate()
+	{
+		if(isLoggedIn)
+		{
+			if(u.getAdmin())
+				return "loggedInTemplateAdmin.xhtml";
+			else
+				return "loggedInTemplate.xhtml";
+		}
+		else
+		{
+			return "loggedOutTemplate.xhtml";
+					
+		}
+	}
+	
+	/*
 	public String getTemplate()
 	{
 		if(isLoggedIn)
@@ -70,7 +90,7 @@ public class UserBean implements Serializable{
 					
 		}
 	}
-
+	*/
 
 	public User getU() {
 		return u;

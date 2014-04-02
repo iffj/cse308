@@ -36,6 +36,9 @@ public class CreateAccountBean implements Serializable{
 	private String email;
 	private String name;
 	
+	//admin testing ================================================================================================
+	private boolean admin;
+	
 
 	 @ManagedProperty(value="#{userBean}")
 	  private UserBean ub;
@@ -62,9 +65,13 @@ public class CreateAccountBean implements Serializable{
         u.setPassword(hashed);
         u.setUsername(username);
         
+        //Admin setting just for test======================================================================
+        u.setAdmin(admin);
+        
         dbm.saveEntity(u);
         ub.setU(u);
         ub.setLoggedIn(true);
+        
 		return "profile.jsf";
 	}
 	
@@ -122,9 +129,15 @@ public class CreateAccountBean implements Serializable{
 	
 	
 	
+	//ADMIN TESTING ================================================================================================
 	
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
 	
-	
+	public boolean getAdmin() {
+		return admin;
+	}
 	
 	
 	

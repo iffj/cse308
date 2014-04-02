@@ -29,7 +29,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
     @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = :userId"),
     @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.email = :email"),
-    @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username")})
+    @NamedQuery(name = "User.findByUsername", query = "SELECT u FROM User u WHERE u.username = :username"),
+	@NamedQuery(name = "User.findByAdmin", query = "SELECT u FROM User u WHere u.admin = :admin")})
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
     
@@ -47,7 +48,7 @@ public class User implements Serializable {
     
     private String name;
     
-    
+    private boolean admin;
     
     
     
@@ -96,6 +97,14 @@ public class User implements Serializable {
 		this.name = name;
 	}
 
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+	
+	public boolean getAdmin() {
+		return admin;
+	}
+	
 	@Override
     public int hashCode() {
         int hash = 0;

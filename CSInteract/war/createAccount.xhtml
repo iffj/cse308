@@ -58,6 +58,16 @@
                             <h:inputText styleClass="createAccountInput" value="#{createAccountBean.name}"></h:inputText>
                         </td>
                     </tr>
+                    
+                    <!-- ADMIN CHECK, JUST FOR TESTING -->
+                    <tr>
+                    	<td>
+                    		Admin :
+                    	</td>
+                    	<td>
+                    		<h:selectBooleanCheckbox value="#{createAccountBean.admin}"></h:selectBooleanCheckbox>
+                    	</td>
+                    </tr>
                     <tr>
                         <td >
                         	<h:commandButton value="Sign up" action="#{createAccountBean.createAccount}"></h:commandButton>

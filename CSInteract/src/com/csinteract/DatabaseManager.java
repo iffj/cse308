@@ -4,6 +4,7 @@
 package com.csinteract;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -12,6 +13,7 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import entities.Admin;
 import entities.User;
 
 
@@ -65,6 +67,26 @@ public class DatabaseManager implements Serializable{
 		return (User)em.createNamedQuery("User.findByUsername").setParameter("username", username).getSingleResult();
 	}
 	
+	public List<User> getUserByAdmin(boolean admin)
+	{
+		EntityManager em = EMF.get().createEntityManager();
+		return (List<User>)em.createNamedQuery("User.findByAdmin").setParameter("admin", admin).getResultList();
+	}
+	
+	public void init()
+	{
+		Admin admin = new Admin();
+		admin.setUsername("admin");
+		admin.setPassword("admin");
+		admin.setAdmin(true);
+		
+		Object adminObject = admin;
+		EntityManager em = EMF.get().createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		et.begin();
+		em.persist(adminObject);
+		et.commit();
+	}
 }
 
 
