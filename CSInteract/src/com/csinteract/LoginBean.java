@@ -36,11 +36,12 @@ public class LoginBean implements Serializable {
 	}
 
 	public String login() {
-		System.out.println("teshgvjght");
+	
 		if(!authenticate())
 		{
 			return null;
 		}
+		
 		ub.setLoggedIn(true);
 		return "profile.jsf";
 	}
@@ -64,6 +65,7 @@ public class LoginBean implements Serializable {
 		{
 			return false;
 		}
+		ub.setU(u);
 		return true;
 	}
 

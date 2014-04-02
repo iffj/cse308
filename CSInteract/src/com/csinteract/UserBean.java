@@ -8,6 +8,8 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
+import entities.User;
+
 
 @ManagedBean
 @SessionScoped
@@ -29,9 +31,7 @@ public class UserBean implements Serializable{
 	{
 		isLoggedIn = false;
 	}
-	private int userId;
-	private String email = "drgdrgdrg";
-	private String name;
+	private User u;
 	private boolean isLoggedIn;
 	
 	
@@ -44,28 +44,7 @@ public class UserBean implements Serializable{
 	
 	
 	
-	public String getEmail()
-	{
-		return email;
-	}
-	public String getName()
-	{
-		return name;
-	}
-	
-	public void setEmail(String email)
-	{
-		this.email = email;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+
 	
 	public String testThisMethod()
 	{
@@ -90,6 +69,15 @@ public class UserBean implements Serializable{
 			return "loggedOutTemplate.xhtml";
 					
 		}
+	}
+
+
+	public User getU() {
+		return u;
+	}
+
+	public void setU(User u) {
+		this.u = u;
 	}
 	
 	

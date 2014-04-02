@@ -58,12 +58,18 @@ public class CreateAccountBean implements Serializable{
         User u = new User();
         u.setEmail(email);
         u.setName(name);
+        u.setUsername(username);
         u.setPassword(hashed);
         u.setUsername(username);
         
         dbm.saveEntity(u);
+        ub.setU(u);
+        ub.setLoggedIn(true);
 		return "profile.jsf";
 	}
+	
+	
+
 	
 	//Getters and Setters
 	public String getEmail() {
