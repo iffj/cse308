@@ -38,6 +38,7 @@ public class DatabaseManager implements Serializable{
 		et.begin();
 		em.persist(o);
 		et.commit();
+		em.close();
 	}
 	
 	
@@ -49,6 +50,7 @@ public class DatabaseManager implements Serializable{
 		et.begin();
 		em.merge(o);
 		et.commit();
+		em.close();
 	}
 	
 	
@@ -56,13 +58,16 @@ public class DatabaseManager implements Serializable{
 	public User getUserByID(int id)
 	{
 		EntityManager em = EMF.get().createEntityManager();
-		return (User)em.createNamedQuery("User.findByUserId").setParameter("userId", id).getSingleResult();
+		User u = (User)em.createNamedQuery("User.findByUserId").setParameter("userId", id).getSingleResult();
+		em.close();
+		return u;
 	}
 	public User getUserByUsername(String username)
 	{
-		System.out.println("test db method");
 		EntityManager em = EMF.get().createEntityManager();
-		return (User)em.createNamedQuery("User.findByUsername").setParameter("username", username).getSingleResult();
+		User u = (User)em.createNamedQuery("User.findByUsername").setParameter("username", username).getSingleResult();
+		em.close();
+		return u;
 	}
 	
 }
